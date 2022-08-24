@@ -1,0 +1,60 @@
+
+<section id="resume" name="resume">
+    <!--EDUCATION DESCRIPTION -->
+      <div class="container desc" >
+        <div class="row">
+      
+          <div class="col-lg-2 col-lg-offset-1">
+            <h5>EDUCATION</h5>
+          </div>
+          
+          <div class ="col-lg-2">
+            <button type ="button" class="btn btn-info" routerLink="/nuevaEduc" *ngIf="isLogged">
+                 Nueva Educacion
+            </button>
+            </div>
+            <table class="table">
+              <tbody>
+                  <tr *ngFor=" let Educacion of educ">
+                     
+          <div class="col-lg-6">
+            <p>
+              <t>{{Educacion.nombre}}</t> 
+               <br/> {{Educacion.lugar}} <br/>
+              <i>2020</i>
+            </p>
+          </div>
+          
+         <div class="col-lg-3">
+            <p>
+              <sm></sm><br/>
+              <imp>  
+                <sm>{{Educacion.estado}}</sm>
+              </imp>
+            </p>
+          
+          </div> 
+          <td>
+            <button class ="btn btn-ligth" routerLink="/editEduc/{{Educacion.id}}"> <i class="bi bi-pencil-square"  *ngIf="isLogged"></i>  
+           </button>
+         </td>
+           
+           
+         <td> 
+            <button class ="btn btn-ligth" (click)="delete(Educacion.id)"> <i class="bi bi-trash3-fill"  *ngIf="isLogged"></i> 
+         </button>
+         
+         </td>
+  
+       </tr>
+  
+     </tbody>
+  
+   </table> 
+       </div>
+        <!--/.row -->
+        <br>
+        <hr>
+       </div>
+      <!--/.container -->
+   

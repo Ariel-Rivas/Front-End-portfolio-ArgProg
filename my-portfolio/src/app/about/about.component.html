@@ -1,0 +1,43 @@
+
+<section id= "about" name="about">
+    <div id="intro">
+      <div class="container">  
+        <div class="row" >
+    
+        <div class="col-lg-2 col-lg-offset-1" >
+            <h5>ABOUT ME</h5>
+        </div>
+        <table class="table">
+          
+          
+          <tbody>
+              
+          <tr  *ngFor=" let persona of pers ">  
+
+              
+              <div  class="col-lg-6">
+                 <p> {{persona.about}}</p>
+              </div>   
+
+             <div class="col-lg-3">
+               <p> <a download="Clip para abrir el cv "  href="../assets/docs/Rivas_Ariel CV.pdf" > <sm>DESCARGAR CV</sm><i class="icon-file"></i></a>
+               </p>
+             </div> 
+              <div>
+          <td>
+            <button class ="btn btn-ligth" routerLink ="/editAbout/{{persona.id}}"> <i class="bi bi-pencil-fill"  *ngIf="isLogged">Editar</i>  
+           </button>
+          </td>
+        </div>
+      </tr>
+        
+    </tbody>
+  
+  </table> 
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/.container -->
+    </div>
+    <!--/ #intro -->
+</section>

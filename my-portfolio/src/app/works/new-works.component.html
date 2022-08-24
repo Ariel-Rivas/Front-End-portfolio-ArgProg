@@ -1,0 +1,31 @@
+<div class="container">
+  
+  <div class="row">
+     <div>
+        <form (ngSubmit)= "onCreate()" novalidate #f="ngForm"> 
+            <div class="form-group">
+                <label for="foto"> foto  </label> 
+                <input type = "text" class="form-control" id="foto" name = "foto"[(ngModel)]="foto" required>
+              </div>
+            <div class="form-group">
+              <label for="nombre"> Nombre  </label> 
+              <input type = "text" class="form-control" id="nombre" name = "nombre"[(ngModel)]="nombre" required>
+            </div> 
+            <div class="form-group">
+                <label for="comentario"> comentario  </label> 
+                <input type = "text" class="form-control" id="comentario" name = "comentario"[(ngModel)]="comentario" required>
+              </div> 
+              <div class="form-group">
+                <label for="posicion"> posicion  </label> 
+                <input type = "text" class="form-control" id="posicion" name = "posicion"[(ngModel)]="posicion" required>
+              </div> 
+              <button class="btn btn-info">
+                Agregar Portfolio
+              </button>
+        </form>
+          
+     </div> 
+
+  </div>
+
+</div>

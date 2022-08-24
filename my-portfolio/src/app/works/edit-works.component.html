@@ -1,0 +1,31 @@
+<div class="container"*ngIf="trab">
+  
+    <div class="row">
+       <div>
+          <form (ngSubmit)= "onUpdate()" novalidate #f="ngForm"> 
+              <div class="form-group">
+                  <label for="foto"> foto  </label> 
+                  <input type = "text" class="form-control" id="foto" name = "foto"[(ngModel)]="trab.foto" required>
+                </div>
+              <div class="form-group">
+                <label for="nombre"> Nombre  </label> 
+                <input type = "text" class="form-control" id="nombre" name = "nombre"[(ngModel)]="trab.nombre" required>
+              </div> 
+              <div class="form-group">
+                  <label for="comentario"> comentario  </label> 
+                  <input type = "text" class="form-control" id="comentario" name = "comentario"[(ngModel)]="trab.comentario" required>
+                </div> 
+                <div class="form-group">
+                  <label for="posicion"> posicion  </label> 
+                  <input type = "text" class="form-control" id="posicion" name = "posicion"[(ngModel)]="trab.posicion" required>
+                </div> 
+                <button class="btn btn-info">
+                 Actualizar
+                </button>
+          </form>
+            
+       </div> 
+  
+    </div>
+  
+  </div>

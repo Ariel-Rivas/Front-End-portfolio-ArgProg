@@ -1,0 +1,29 @@
+<div class="container"*ngIf="pers">
+  
+    <div class="row">
+       <div>
+          <form (ngSubmit)= "onUpdate()" novalidate #f="ngForm"> 
+              <div class="form-group">
+                  <label for="foto"> foto </label> 
+                  <input type = "text" class="form-control" id="foto" name = "about"[(ngModel)]="pers.foto" required>
+                </div> 
+                <div class="form-group">
+                    <label for="nombre"> nombre y apellido </label> 
+                    <input type = "text" class="form-control" id="nombre" name = "nombre"[(ngModel)]="pers.nombre" required>
+                  </div> 
+                  <div class="form-group">
+                    <label for="email"> email </label> 
+                    <input type = "text" class="form-control" id="email" name = "email"[(ngModel)]="pers.email" required>
+                  </div>
+                <button class="btn btn-info">
+                 Actualizar
+                </button>
+          </form>
+            
+       </div> 
+  
+    </div>
+  
+  </div>
+
+
